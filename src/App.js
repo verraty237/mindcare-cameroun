@@ -96,8 +96,7 @@ export default function App() {
     if (saved) { setTheme(saved); document.body.className = saved; }
     const savedUser = localStorage.getItem('mindcare_user');
     if (savedUser) setUser(JSON.parse(savedUser));
-  }, []);
-
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     document.body.className = theme;
     localStorage.setItem('mindcare_theme', theme);

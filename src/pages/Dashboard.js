@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { } from 'react-router-dom';
 import { ThemeContext } from '../App';
 import { supabase } from '../supabaseClient';
 import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
@@ -7,8 +7,8 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,
-  PieChart, Pie, Cell, LineChart, Line, AreaChart, Area,
-  RadarChart, Radar, PolarGrid, PolarAngleAxis, Legend,
+PieChart, Pie, Cell, AreaChart, Area,
+RadarChart, Radar, PolarGrid, PolarAngleAxis, Legend,
 } from 'recharts';
 import toast from 'react-hot-toast';
 
@@ -44,7 +44,7 @@ const CustomTooltip = ({ active, payload, label, isDark }) => {
 
 export default function Dashboard() {
   const { theme } = useContext(ThemeContext);
-  const navigate = useNavigate();
+ // const navigate = useNavigate();
   const isDark = theme === 'dark';
   const [citoyens, setCitoyens] = useState([]);
   const [agents, setAgents] = useState([]);
